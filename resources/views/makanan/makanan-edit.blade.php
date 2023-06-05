@@ -1,0 +1,59 @@
+@extends('template')
+@section('content')
+<br>
+<br>
+<br>
+<br>
+<div class="col-md-8">
+            {{-- <div class="card card-user">
+              <div class="card-header"> 
+                <h4 class="card-title">Tambah Kriteria</h4>
+              </div> --}}
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title"> Makanan</h4>
+              </div>
+              <div class="card-body">
+                <form action="/makananUpdate/{{$makanan->id_makanan}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="row">
+                  <div class="col-md-5 pr-1">
+                    <div class="form-group">
+                      <label>ID makanan</label>
+                      <input type="text" class="form-control" name="id_makanan"  placeholder="" value="">
+                    </div>
+                  </div>
+                  <div class="col-md-5 px-1">
+                    <div class="form-group">
+                      <label>Nama Makanan</label>
+                      <input type="text" class="form-control" name="nama_makanan" placeholder="" value="">
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-md-5 pr-1">
+                    <div class="form-group">
+                      <label>Deksripsi</label>
+                      <input type="text" class="form-control"name="deskripsi_makanan"  placeholder="" value="">
+                    </div>
+                  </div>
+                  <div class="col-md-5 pl-1">
+                    <div class="form-group">
+                      <label>Harga Makanan</label>
+                      <input type="text" class="form-control" name="harga_makanan"  placeholder="" value="">
+                    </div>
+                      <button type="submit" class="btn btn-primary btn-round" >Edit data</button> 
+                      {{-- <!-- onclick="location.href='{{ route('dashboard') }}'" --> --}}
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+@endsection
